@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light" data-scheme="green">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ЗооВики — энциклопедия зооволонтёра</title>
+<meta name="description" content="Энциклопедия терминов для зооволонтёров: амуниция, здоровье, поведение, уход. От А до Я.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+</head>
+<body>
+
+<header id="topbar">
+  <div class="logo" data-go="#/" title="На главную"><span class="dot"></span>ЗооВики</div>
+  <div class="search-wrap">
+    <input id="globalSearch" placeholder="Поиск термина…" autocomplete="off" aria-label="Поиск по терминам">
+    <div id="suggestBox" class="suggest hidden"></div>
+  </div>
+  <div class="auth-area" id="authArea"></div>
+  <button class="icon-btn" id="bmBtn" title="Закладки" hidden></button>
+  <button class="icon-btn" id="favBtn" title="Избранное" hidden></button>
+  <button class="icon-btn" id="modBtn" title="Панель модератора" hidden><span class="count" id="modCount" hidden>0</span></button>
+  <button class="icon-btn" id="adminBtn" title="Админ-панель" hidden></button>
+  <button class="icon-btn" id="themeBtn" title="Сменить тему"></button>
+</header>
+
+<nav id="mainnav" aria-label="Основная навигация">
+  <a href="#/" data-nav="/">Энциклопедия</a>
+  <a href="#/pets" data-nav="/pets" id="navPets">Питомцы</a>
+  <a href="#/duty" data-nav="/duty">Дежурства</a>
+  <a href="#/forum" data-nav="/forum">Форум</a>
+  <a href="#/start" data-nav="/start">Новичкам</a>
+  <a href="#/news" data-nav="/news">Новости</a>
+  <a href="#/shelters" data-nav="/shelters">Приюты</a>
+  <span class="nav-sep"></span>
+  <a href="#/sos" data-nav="/sos" class="sos">SOS</a>
+  <a href="#/calc" data-nav="/calc">Калькулятор</a>
+  <a href="#/symptom" data-nav="/symptom">Симптомы</a>
+  <a href="#/checklists" data-nav="/checklists">Чек-листы</a>
+</nav>
+
+<main id="app"></main>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-box" id="modalBox"></div>
+</div>
+<div id="toastRoot" aria-live="polite"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/data.js?v=4"></script>
+<script src="js/store.js?v=4"></script>
+<script src="js/ui.js?v=4"></script>
+<script src="js/auth.js?v=4"></script>
+<script src="js/views-home.js?v=4"></script>
+<script src="js/views-article.js?v=4"></script>
+<script src="js/views-profile.js?v=4"></script>
+<script src="js/views-mod.js?v=4"></script>
+<script src="js/views-tools.js?v=4"></script>
+<script src="js/views-pets.js?v=4"></script>
+<script src="js/views-duty.js?v=4"></script>
+<script src="js/views-forum.js?v=4"></script>
+<script src="js/views-news.js?v=4"></script>
+<script src="js/views-start.js?v=4"></script>
+<script src="js/views-shelters.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>
