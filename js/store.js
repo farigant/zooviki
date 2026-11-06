@@ -64,6 +64,7 @@ function normalizeShift(s){
     who: Array.isArray(s.who) ? s.who : [],
     max: typeof s.max==="number" ? s.max : 2,
     note: String(s.note||""),
+    seriesId: s.seriesId || "",
   };
 }
 
