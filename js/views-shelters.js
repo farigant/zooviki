@@ -60,9 +60,10 @@ const Shelters = {
     Shelters.map.on("focus", ()=>Shelters.map.scrollWheelZoom.enable());
     Shelters.map.on("blur", ()=>Shelters.map.scrollWheelZoom.disable());
 
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    // CartoDB — работает и с file://, и с GitHub Pages (OSM-публичный сервер блокирует такие запросы)
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      maxZoom: 20,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>',
     }).addTo(Shelters.map);
 
     // векторные маркеры — чёткие на любом экране, не зависят от шрифтов
